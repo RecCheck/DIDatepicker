@@ -13,6 +13,7 @@ extern const CGFloat kDIDatepickerHeight;
 // data
 @property (strong, nonatomic) NSArray *dates;
 @property (strong, nonatomic, readonly) NSDate *selectedDate;
+@property (strong, nonatomic, readwrite) NSIndexPath *selectedIndexPath;
 
 // UI
 @property (strong, nonatomic) UIColor *bottomLineColor;
@@ -26,4 +27,5 @@ extern const CGFloat kDIDatepickerHeight;
 - (void)selectDate:(NSDate *)date;
 - (void)selectDateAtIndex:(NSUInteger)index;
 
+@property (strong, nonatomic) UICollectionView *datesCollectionView;
 @end

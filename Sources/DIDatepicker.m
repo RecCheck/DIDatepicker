@@ -224,6 +224,10 @@ NSString * const kDIDatepickerCellIndentifier = @"kDIDatepickerCellIndentifier";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    if ([self.selectedIndexPath isEqual:indexPath])
+    {
+        return;
+    }
     [self.datesCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     _selectedDate = [self.dates objectAtIndex:indexPath.item];
     self.selectedIndexPath = indexPath;

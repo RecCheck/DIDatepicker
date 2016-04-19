@@ -38,7 +38,6 @@ NSString * const kDIDatepickerCellIndentifier = @"kDIDatepickerCellIndentifier";
 
 - (void)setupViews
 {
-    self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     self.backgroundColor = [UIColor whiteColor];
     self.bottomLineColor = [UIColor colorWithWhite:0.816 alpha:1.000];
     self.selectedDateBottomLineColor = self.tintColor;
@@ -60,7 +59,7 @@ NSString * const kDIDatepickerCellIndentifier = @"kDIDatepickerCellIndentifier";
     _selectedDate = selectedDate;
     
     NSIndexPath *selectedCellIndexPath = [NSIndexPath indexPathForItem:[self.dates indexOfObject:selectedDate] inSection:0];
-
+    
     [self.datesCollectionView deselectItemAtIndexPath:selectedIndexPath animated:YES];
     [self.datesCollectionView selectItemAtIndexPath:selectedCellIndexPath animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
     selectedIndexPath = selectedCellIndexPath;
@@ -83,6 +82,7 @@ NSString * const kDIDatepickerCellIndentifier = @"kDIDatepickerCellIndentifier";
         [_datesCollectionView setAllowsMultipleSelection:YES];
         _datesCollectionView.dataSource = self;
         _datesCollectionView.delegate = self;
+        _datesCollectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         [self addSubview:_datesCollectionView];
     }
     return _datesCollectionView;

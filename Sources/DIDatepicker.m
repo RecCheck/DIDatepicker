@@ -24,6 +24,8 @@ NSString * const kDIDatepickerCellIndentifier = @"kDIDatepickerCellIndentifier";
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
+    [self layoutIfNeeded];
     [self setupViews];
 }
 

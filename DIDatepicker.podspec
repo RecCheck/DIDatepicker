@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DIDatepicker"
-  s.version      = "0.1"
+  s.version      = "0.2"
   s.summary      = "Yet another datepicker for iOS"
   s.homepage     = "https://github.com/noxt/DIDatepicker"
   s.screenshots  = "https://raw.githubusercontent.com/noxt/DIDatepicker/master/screenshots/screenshot.png"
